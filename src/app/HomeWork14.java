@@ -13,7 +13,7 @@ public class HomeWork14 {
         System.out.print("Введіть ім'я відправника (або залиште порожнім для анонімного): ");
         String sender = scanner.nextLine();
 
-        Message message = new Message(text, sender);
+        PrinterImpl.Message message = new PrinterImpl.Message(text, sender);
         printer.print(message);
 
         scanner.close();

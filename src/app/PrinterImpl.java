@@ -1,6 +1,34 @@
 package app;
 
 public class PrinterImpl implements Printer {
+
+    // Внутренний статический класс Message
+    public static class Message {
+        private String text;
+        private String sender;
+
+        public Message(String text, String sender) {
+            this.text = text;
+            this.sender = sender;
+        }
+
+        public String getText() {
+            return text;
+        }
+
+        public void setText(String text) {
+            this.text = text;
+        }
+
+        public String getSender() {
+            return sender;
+        }
+
+        public void setSender(String sender) {
+            this.sender = sender;
+        }
+    }
+
     @Override
     public void print(Message message) {
         if ((message.getText() == null || message.getText().isEmpty()) &&

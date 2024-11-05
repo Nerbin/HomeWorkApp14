@@ -1,6 +1,6 @@
 package app;
 
 public interface Printer {
-    void print(Message message);
+    void print(PrinterImpl.Message message);
 
 }
